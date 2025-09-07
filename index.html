@@ -253,7 +253,14 @@
     <!-- EmailJS SDK -->
     <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
     <!-- Load EmailJS config -->
-    <script src="config.js"></script>
+    <script>
+      // EmailJS configuration embedded for deployment
+      const EMAILJS_CONFIG = {
+        PUBLIC_KEY: "nczRigOeglHPhosdL",
+        SERVICE_ID: "service_d89h7c6",
+        TEMPLATE_ID: "template_vg5060c"
+      };
+    </script>
     <script>
       (function () {
         emailjs.init(EMAILJS_CONFIG.PUBLIC_KEY);
